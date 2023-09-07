@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Example</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container"> 
+    <h1>PEOPLE ENTERED</h1>
+    <p>Count:<span id="count-el">0</span></p>
+    <button id="increment-btn" onclick="increment()">Increment</button>
+    <button id="save-btn" onclick="save()">Save</button>
+    <p id="">Saved Counts: <span id="save-el"></span></p>
+</div>
+
+    <script>
+        let saveEl = document.getElementById("save-el")
+        let countEl = document.getElementById("count-el")
+        let count = 0
+        console.log(saveEl)
+
+        function increment() {
+            count += 1
+            countEl.textContent = count
+        }
+
+        function save() {
+            let countStr = count + "-"
+            saveEl.textContent += countStr;
+            countEl.textContent = 0;
+            count = 0;
+            console.log(count);
+        }
+    </script>
+</body>
+
+</html>
+
